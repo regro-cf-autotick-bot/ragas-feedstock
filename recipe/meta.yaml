@@ -1,5 +1,5 @@
 {% set name = "ragas" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ragas-{{ version }}.tar.gz
-  sha256: 73428dd0274d3d7175c5ca738a180a8329c9abebdeeee419efef8b6469439f1a
+  sha256: eda2603269c5c8021166ef56328b68ed88af15c4205a3e31b759233fd7ffc720
 
 build:
   noarch: python
@@ -21,6 +21,7 @@ requirements:
     - setuptools-scm >=6.2
     - pip
   run:
+    - langchain_openai
     - networkx
     - scikit-network
     - gitpython
